@@ -1,10 +1,10 @@
-import { useInfiniteQuery, keepPreviousData } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import { getCars, GetCarsParams } from "../api/cars";
 
 export function useGetCars(params: GetCarsParams = {}) {
   return useInfiniteQuery({
     queryKey: ["cars", params],
-    queryFn: () => getCars(params),
+    queryFn: ({ pageParam }) => getCars({ ...params, page: pageParam }),
     initialPageParam: 1,
     getNextPageParam: (lastPage) => {
       if (lastPage.page < lastPage.totalPages) {

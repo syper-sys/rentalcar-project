@@ -1,5 +1,5 @@
 import { Car } from "@/types/car";
-import api from "./api";
+import api from "@/lib/api/api";
 
 export interface GetCarsParams {
   brand?: string;
