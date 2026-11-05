@@ -1,7 +1,9 @@
-function Catalog() {
+"use client";
+
+function Catalog(){
     return(
-        <p>Catalog</p>
+        <>
+            <p>Catalog</p>
+        </>
     )
 }
-
-export default Catalog;

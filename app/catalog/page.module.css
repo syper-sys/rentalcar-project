@@ -1,0 +1,190 @@
+.main {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Filters form */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px 24px;
+}
+
+.filtersItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filtersItem > span,
+.filtersItem,
+.mileage {
+  color: #101828;
+}
+
+.select,
+.input {
+  min-width: 160px;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #fff;
+  font: inherit;
+  color: #101828;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus,
+.input:focus {
+  border-color: #00aad4;
+}
+
+.select:invalid,
+.select option[value=""]:disabled {
+  color: #9aa3b2;
+}
+
+.mileage {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  border: none;
+  margin: 0;
+}
+
+.mileage > legend {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.mileageFields {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mileageFields .input {
+  min-width: 110px;
+  width: 110px;
+}
+
+.mileageDivider {
+  color: #101828;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 12px;
+  background-color: #00aad4;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #0091b7;
+}
+
+.button:disabled {
+  background-color: #9aa3b2;
+  cursor: not-allowed;
+}
+
+.reset {
+  padding: 10px 24px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #101828;
+  font: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.reset:hover {
+  border-color: #00aad4;
+}
+
+.error {
+  margin: 0;
+  color: #e11d48;
+  font-size: 13px;
+}
+
+/* Cars list */
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.carBrand {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.carInfo {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.carPrice {
+  margin: 0;
+  color: #00aad4;
+  font-weight: 600;
+}
+
+.empty,
+.loading {
+  margin: 0;
+  color: #475569;
+}
+
+@media (max-width: 640px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
