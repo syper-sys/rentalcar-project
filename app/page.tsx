@@ -24,7 +24,7 @@ export default function Home() {
                 Reliable and budget-friendly rentals for any journey
               </p>
             </div>
-            <Link href="/catalog" className={css.link}>
+            <Link href="/cars" className={css.link}>
               View catalog
             </Link>
           </div>

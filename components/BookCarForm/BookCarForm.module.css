@@ -1,0 +1,131 @@
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 640px;
+  background-color: var(--color-white);
+}
+
+.containerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-gray);
+}
+
+.labelWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  z-index: 1;
+  color: var(--color-text);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 20px;
+  padding-right: 40px;
+  border: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 12px;
+  background-color: var(--color-inputs);
+}
+
+.input::placeholder {
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.textarea {
+  padding: 14px 20px 56px;
+}
+
+.submitButton {
+  border-radius: 12px;
+  padding: 12px 51px;
+  width: 100%;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
+}
+
+.iconWarn {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--color-error);
+}
+
+.error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--color-error);
+}
+
+.inputError {
+  background-color: var(--color-error-light);
+  border: 1px solid var(--color-error);
+}
+
+.labelError {
+  display: block;
+  width: max-content;
+  padding: 0 8px;
+  border-radius: 8px;
+  color: var(--color-error);
+  background-color: var(--color-error-light);
+}

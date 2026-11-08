@@ -1,0 +1,36 @@
+.loaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.inlineLoader {
+  padding: 0;
+}
+
+.spinner {
+  display: inline-block;
+  border: 3px solid var(--color-inputs);
+  border-top-color: var(--color-light-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.large {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2s;
+  }
+}

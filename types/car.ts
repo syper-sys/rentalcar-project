@@ -18,4 +18,14 @@ export interface Car {
   };
   rentalConditions: string[];
   mileage: number;
+  stockNumber: number;
+}
+
+export interface CarsValuesSchema {
+  brand: string;
+  price: string;
+  mileage: {
+    min: string;
+    max: string;
+  };
 }

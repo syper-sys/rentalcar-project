@@ -76,9 +76,9 @@ function Header() {
           </li>
           <li className={css.item}>
             <Link
-              href="/catalog"
+              href="/cars"
               className={
-                isLinkActive(pathname, "/catalog")
+                isLinkActive(pathname, "/cars")
                   ? `${css.navLink} ${css.navLinkActive}`
                   : css.navLink
               }

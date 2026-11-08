@@ -1,0 +1,15 @@
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.carFormContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.img {
+  border-radius: 16px;
+}

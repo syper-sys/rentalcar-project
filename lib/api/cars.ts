@@ -13,7 +13,7 @@ export interface GetCarsParams {
 export interface BookingRequestParams {
   name: string;
   email: string;
-  comment?: string;
+  comment: string;
 }
 
 export interface BookingRequestResponse {
@@ -35,7 +35,9 @@ export interface GetCarsFiltersResponse {
   };
 }
 
-export async function getCars(params: GetCarsParams = {}): Promise<GetCarsResponse> {
+export async function getCars(
+  params: GetCarsParams = {},
+): Promise<GetCarsResponse> {
   const { data } = await api.get<GetCarsResponse>("/cars", { params });
   return data;
 }
@@ -52,7 +54,7 @@ export async function getCarById(carId: string) {
 
 export async function createBookingRequest(
   carId: string,
-  bookingData: BookingRequestParams
+  bookingData: BookingRequestParams,
 ): Promise<BookingRequestResponse> {
   const { data } = await api.post<BookingRequestResponse>(
     `/cars/${carId}/booking-requests`,

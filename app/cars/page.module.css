@@ -1,0 +1,183 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 400px;
+  align-items: center;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(245, 245, 245, 0.89);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.modal {
+  padding: 48px 96px;
+  background-color: var(--color-white);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 543px;
+  margin: 0 auto;
+}
+
+.modalTextWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 32px;
+  max-width: 351px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Cars list */
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin: 0;
+  margin-top: 60px;
+  margin-bottom: 48px;
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 16px;
+  border-radius: 16px;
+  gap: 8px;
+  width: calc((100% - 96px) / 4);
+  min-width: 276px;
+  background-color: var(--color-white);
+}
+
+.img {
+  align-self: center;
+  border-radius: 14px;
+  height: 268px;
+}
+
+.containerTextWrapper {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+.accent {
+  color: var(--color-light-blue);
+}
+
+.detailsWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background-color: var(--color-bg);
+}
+
+.details {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33333;
+  padding: 0 6px;
+  border-right: 1px solid #d0d5dd;
+  color: var(--color-text);
+}
+
+.details:last-child {
+  border: none;
+}
+
+.readMoreBtn {
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  color: var(--color-white);
+  background-color: var(--color-light-blue);
+}
+
+.loadMoreBtn {
+  align-self: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  width: max-content;
+  border-radius: 12px;
+  padding: 12px 38px;
+  border: 1px solid var(--color-light-blue);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Not found */
+
+.notFoundContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.notFoundTextWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 351px;
+}
+
+.notFoundTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33333;
+  text-align: center;
+}
+
+.notFoundText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+}
