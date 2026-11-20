@@ -89,6 +89,10 @@ The application expects the following endpoints to be available from `NEXT_PUBLI
 - `GET /cars/:id` — fetch a vehicle by ID
 - `POST /cars/:id/booking-requests` — submit a booking request
 
+## Backend API Documentation
+
+See the [backend API documentation (Swagger)](https://car-rental-api.goit.study/api-docs/).
+
 ## Main Routes
 
 - `/` — project landing page
