@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RentalCar
+
+RentalCar is a responsive car rental catalog built with Next.js. Users can browse available vehicles, filter the catalog by brand, price, and mileage, open a vehicle's detail page, and submit a booking request.
+
+## Features
+
+- Browse a catalog of rental cars
+- Filter vehicles by brand, price per hour, and mileage range
+- Clear active filters and reset the catalog
+- Load additional results with pagination
+- View detailed vehicle information, specifications, features, and rental conditions
+- Submit a booking request with name, email, and a comment
+- Loading, empty-results, and error states
+- Responsive layouts and route-specific metadata
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **UI:** React 19
+- **Data fetching:** Axios and TanStack React Query
+- **Forms and validation:** Formik and Yup
+- **Styling:** CSS Modules and global CSS
+- **Notifications:** React Hot Toast
+- **Icons:** React Icons
+- **Utilities:** clsx
+- **Linting:** ESLint
+
+## Project Structure
+
+```text
+app/
+  cars/                  Catalog and vehicle detail routes
+  api/                   API route area
+  Providers.tsx          React Query and toast providers
+  layout.tsx             Root layout and global metadata
+components/              Reusable catalog, header, form, loader, and card components
+lib/api/                 Axios client and rental API functions
+lib/hooks/               React Query hooks
+public/                  Images and static assets
+styles/                  Global and shared styles
+types/                   Shared TypeScript interfaces
+```
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 20 or newer
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the project root and set the base URL for the rental API:
+
+```env
+NEXT_PUBLIC_API_URL=https://your-api.example.com
+```
+
+The API client uses this value for car listings, filters, vehicle details, and booking requests.
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — start the development server
+- `npm run build` — create a production build
+- `npm run start` — start the production server
+- `npm run lint` — run ESLint
 
-## Learn More
+## API Endpoints Used
 
-To learn more about Next.js, take a look at the following resources:
+The application expects the following endpoints to be available from `NEXT_PUBLIC_API_URL`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `GET /cars` — fetch paginated vehicles and apply catalog filters
+- `GET /cars/filters` — fetch available brands and the price range
+- `GET /cars/:id` — fetch a vehicle by ID
+- `POST /cars/:id/booking-requests` — submit a booking request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Main Routes
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/` — project landing page
+- `/cars` — searchable and filterable vehicle catalog
+- `/cars/:carId` — vehicle details and booking form
